@@ -63,7 +63,9 @@ const threeCalcs = ((n2 - n1) * n3) % n4;
 console.log("threeCalcs: " + threeCalcs);
 
 //Check 9: Change the way that isOver25 calculates so that we do not need to use the NOT operator in other logic comparisons.
-// NOT is used in the uniqueness check so I'll just combine these checks by using OR for all arguments -
+// NOT is used in the uniqueness check so I'll just combine these checks by using OR for all arguments and using mod which always yields a positive integer -
 
-const isNewOver25 = n1 > 25 || n1 === n2 || n1 === n3 || n1 === n4 || n2 > 25 || n2 === n3 || n2 === n4 || n3 > 25 || n3 === n4 || n4 > 25;
+const isNewOver25 = n1 <= 25 || (n1 - n2 || n1 === n3 || n1 === n4 || n2 > 25 || n2 === n3 || n2 === n4 || n3 > 25 || n3 === n4 || n4 > 25;
 console.log("isNewOver25 (which also checks uniqueness): " + isNewOver25);
+
+
