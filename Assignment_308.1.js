@@ -67,3 +67,32 @@ console.log("threeCalcs: " + threeCalcs);
 
 const isUnder25AndUnique = ((n1 > 25) + (n1 / n2 === 1) + (n1 / n3 === 1) + (n1 / n4 === 1) + (n2 > 25) + (n2 / n3 === 1) + (n2 / n4 === 1) + (n3 > 25) + (n3 / n4 === 1) + (n4 > 25)) === 0;
 console.log("isUnder25AndUnique: " + isUnder25AndUnique);
+
+
+//  Practical Math
+// The distance of the trip, in total, is 1,500 miles.
+// Your car’s fuel efficiency is as follows:
+// At 55 miles per hour, you get 30 miles per gallon.
+// At 60 miles per hour, you get 28 miles per gallon.
+// At 75 miles per hour, you get 23 miles per gallon.
+// You have a fuel budget of $175.
+// The average cost of fuel is $3 per gallon.
+
+//  PT 1: How many gallons of fuel will you need for the entire trip?
+// Best idea is for me to give a range of low end to high end amount of fuel needed.
+
+let hourLowSpeed;
+let hoursMedSpeed;
+let hoursHighSpeed;
+
+const tripMiles = 1500;
+const budget = 175;
+const perGallon = 3;
+
+const lowEndGallons = 1500 / 30;
+const highEndGallons = 1500 / 23;
+
+console.log("For a trip of " + tripMiles + " miles, you would need anywhere from " + lowEndGallons + " to " + highEndGallons + " gallons.")
+
+
+
