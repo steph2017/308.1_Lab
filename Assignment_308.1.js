@@ -50,5 +50,5 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
 // console.log("divByFive: " + divByFive);
 
 //Check 7: if the first number is larger than the last. Simple comparison operand will work
-const firstBiggerThanLast = n1 >= n4;
+const firstBiggerThanLast = n1 > n4;
 console.log("firstBiggerThanLast: " + firstBiggerThanLast);
