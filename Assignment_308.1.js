@@ -52,3 +52,12 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
 //Check 7: if the first number is larger than the last. Simple comparison operand will work
 const firstBiggerThanLast = n1 > n4;
 console.log("firstBiggerThanLast: " + firstBiggerThanLast);
+
+//Check 8: Complete the following math - 
+// Subtract the first number from the second number.
+// Multiply the result by the third number.
+// Find the remainder of dividing the result by the fourth number.
+// Minding precedence of operands is key - * and % have the same precedence followed by -. Using () to conrol precedence.
+
+const threeCalcs = ((n2 - n1) * n3) % n4;
+console.log("threeCalcs: " + threeCalcs);
