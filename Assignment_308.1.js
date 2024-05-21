@@ -115,4 +115,6 @@ else {
 
 }
 
+// Based on calculations, medium speed gets you the shortest trip time while staying in budget. 
+
 
