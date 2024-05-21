@@ -81,11 +81,15 @@ console.log("isUnder25AndUnique: " + isUnder25AndUnique);
 //  PT 1: How many gallons of fuel will you need for the entire trip?
 // Best idea is for me to give a range of low end to high end amount of fuel needed.
 
-let hourLowSpeed;
-let hoursMedSpeed;
-let hoursHighSpeed;
+let hourLowSpeed = 0;
+let hoursMedSpeed = 0;
+let hoursHighSpeed = 0;
 
-const tripMiles = 1500;
+let MilesLowSpeed = 100;
+let MilesMedSpeed = 750;
+let MilesHighSpeed = 650;
+
+let tripMiles = 1500;
 const budget = 175;
 const perGallon = 3;
 
@@ -94,5 +98,18 @@ const highEndGallons = 1500 / 23;
 
 console.log("For a trip of " + tripMiles + " miles, you would need anywhere from " + lowEndGallons + " to " + highEndGallons + " gallons.")
 
+
+// PT 2: Will your budget be enough to cover the fuel expense?
+// Best idea is to sum all mile-hours of all speeds and compare to the budget amount.
+
+if ((MilesLowSpeed + MilesMedSpeed + MilesHighSpeed) != 1500) {
+    tripMiles = MilesHighSpeed + MilesMedSpeed + MilesLowSpeed;
+    console.log("Change your inputs; the trip is 1500 miles and you are calculating a budget for a " + tripMiles + " miles trip.");
+}
+else {
+    let testBudget = (MilesLowSpeed / 30 * 3) + (MilesMedSpeed / 28 * 3) + (MilesHighSpeed / 23 * 3);
+    testBudget > budget ? console.log("Based on your total variable mileage and your cost per gallon, your trip will cost " + testBudget + ", that's too much!") : console.log("Based on your total variable mileage and your cost per gallon, your trip will cost " + testBudget + ", nice!");
+
+}
 
 
