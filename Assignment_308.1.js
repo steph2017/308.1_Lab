@@ -1,8 +1,8 @@
 // The initial numbers that must be verified.
-const n1 = 10;
+const n1 = 24;
 const n2 = 15;
-const n3 = 23;
-const n4 = 7;
+const n3 = 10;
+const n4 = 1;
 
 // Check one: add up to 50
 // This is a fairly simple operation using
@@ -63,9 +63,7 @@ const threeCalcs = ((n2 - n1) * n3) % n4;
 console.log("threeCalcs: " + threeCalcs);
 
 //Check 9: Change the way that isOver25 calculates so that we do not need to use the NOT operator in other logic comparisons.
-// NOT is used in the uniqueness check so I'll just combine these checks by using AND for all arguments and using mod which always yields a positive integer -
+// NOT is used in the uniqueness check so I'll just combine these checks. Using the fact the booleans conform to 1 or 0 when treated as numbers.
 
-const isNewOver25 = (n1 <= 25) && (n1 % n2 > 0) && (n1 % n3 > 0) && (n1 % n4 > 0) && (n2 <= 25) && (n2 % n3 > 0) && (n2 % n4 > 0) && (n3 <= 25) && (n3 % n4 > 0) && (n4 <= 25);
-console.log("isNewOver25 (which also checks uniqueness): " + isNewOver25);
-
-
+const isUnder25AndUnique = ((n1 > 25) + (n1 / n2 === 1) + (n1 / n3 === 1) + (n1 / n4 === 1) + (n2 > 25) + (n2 / n3 === 1) + (n2 / n4 === 1) + (n3 > 25) + (n3 / n4 === 1) + (n4 > 25)) === 0;
+console.log("isUnder25AndUnique: " + isUnder25AndUnique);
