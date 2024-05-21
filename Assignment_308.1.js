@@ -44,10 +44,10 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
     !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) &&
     (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
 
-// // The below is my code going forward
-// // Check 6: All numbers are divisible by 5 - I'll use mod operand to achieve this
-// const divByFive = (n1 % 5) + (n2 % 5) + (n3 % 5) + (n4 % 5) === 0;
-// console.log("divByFive: " + divByFive);
+// The below is my code going forward
+// Check 6: All numbers are divisible by 5 - I'll use mod operand to achieve this
+const divByFive = (n1 % 5) + (n2 % 5) + (n3 % 5) + (n4 % 5) === 0;
+console.log("divByFive: " + divByFive);
 
 //Check 7: if the first number is larger than the last. Simple comparison operand will work
 const firstBiggerThanLast = n1 > n4;
@@ -61,3 +61,9 @@ console.log("firstBiggerThanLast: " + firstBiggerThanLast);
 
 const threeCalcs = ((n2 - n1) * n3) % n4;
 console.log("threeCalcs: " + threeCalcs);
+
+//Check 9: Change the way that isOver25 calculates so that we do not need to use the NOT operator in other logic comparisons.
+// NOT is used in the uniqueness check so I'll just combine these checks by using OR for all arguments -
+
+const isNewOver25 = n1 > 25 || n1 === n2 || n1 === n3 || n1 === n4 || n2 > 25 || n2 === n3 || n2 === n4 || n3 > 25 || n3 === n4 || n4 > 25;
+console.log("isNewOver25 (which also checks uniqueness): " + isNewOver25);
