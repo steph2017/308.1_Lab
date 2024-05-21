@@ -1,6 +1,6 @@
 // The initial numbers that must be verified.
-const n1 = 9;
-const n2 = 16;
+const n1 = 10;
+const n2 = 15;
 const n3 = 20;
 const n4 = 5;
 
@@ -47,3 +47,4 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
 // The below is my code going forward
 // Check 6: All numbers are divisible by 5 - I'll use mod operand to achieve this
 const divByFive = (n1 % 5) + (n2 % 5) + (n3 % 5) + (n4 % 5) === 0;
+console.log("divByFive: " + divByFive);
